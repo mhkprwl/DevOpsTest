@@ -16,5 +16,4 @@ variable "appvmnic" {}
 variable "appvmname" {}
 variable "kvname" {}
 variable "vm_admin_username" {}
-
 variable "saname" {}
