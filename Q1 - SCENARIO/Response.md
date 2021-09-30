@@ -5,12 +5,10 @@
          >> Select Enable continuous integration.
       
 ### 2) There will be test projects which will create and maintained in the solution along the Web and API. The trigger should build all the 3 projects - Web, API and test.The build should not be successful if any test fails.
-        
-        >> Create multiple projects and add to the solution.
-        >> Push the code to a version control, example Azure Repos (Git) in Azure DevOps
+       
         >> Create Build Defination and Select Enable continuous integration option in triggers.
         >> The above step would run the build defination if any changes are made to the main/master branch.
-                  >>>> For a granular control, you can use Path Filter
+                  >>>> For a granular control, you can use Path Filter alongwith Branch Filter
         >> In the Publish Test Results task in the Build Defination, select "Fail if there are test failures" to take care of failing the build if any test case gets failed.
         
 ### 3) The deployment of code and artifacts should be automated to Dev environment.
