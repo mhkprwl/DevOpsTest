@@ -1,0 +1,20 @@
+variable "tenant_id" {}
+variable "subscription_id" {}
+variable "client_id" {}
+variable "client_secret" {}
+variable "object_id" {}
+variable "rgname" {}
+variable "location" {}
+variable "vnetname" {}
+variable "websubnetname" {}
+variable "appsubnetname" {}
+variable "webnsgname" {}
+variable "appnsgname" {}
+variable "webvmnic" {}
+variable "webvmname" {}
+variable "appvmnic" {}
+variable "appvmname" {}
+variable "kvname" {}
+variable "vm_admin_username" {}
+
+variable "saname" {}
