@@ -17,6 +17,8 @@
         >> Create multiple stages as per environment Dev, QA and Prod
         >> For Dev Stage, enable Continuous deployment trigger, which would create a release every time a new build is available.
         
+        Note: Authentication for Deploying the resources in Cloud from Azure Devops would be done using Service Connection.
+        
 ### 4) Upon successful deployment to the Dev environment, deployment should be easily promoted to QA and Prod through automated process.
 
         >> In the QA and Prod Stages, under Triggers in the Pre-Deployment Conditions, select "After Stage" 
