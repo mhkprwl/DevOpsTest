@@ -15,18 +15,18 @@
         >> CI Pipeline:
 
         1. Draft your application build pipeline using the required tasks ( Restore, Build, Test and Publish)
-        2. Add a new task to Copy the Terraform Files to Artifacts staging directory.
-        3. Add two new task - Terraform Init and Terraform Plan.
-        3. Publish the Artifacts and it would cover both your .zip file and terraform files for source directory.
+        2. Add two new task - Terraform Init and Terraform Plan.
+        3. Add a new task to Copy the Terraform Files to Artifacts staging directory.
+        4. Publish the Artifacts and it would cover both your .zip file and terraform files from source directory.
 
         >> CD Pipeline:
 
         1. Create a Release pipeline pointing to the Build pipeline created in above step. Hence it would take artifacts form build pipeline.
-        2. Enable the Pre-Deployment Approvals, so that the Approver/s could check the build Pipleline output/artifacts and approves it he/she/they finds it perfect.
+        2. Enable the Pre-Deployment Approvals, so that the Approver/s could check the build Pipleline output/artifacts and approves it he/she/they find it perfect.
         3. Using Az CLI/Powershell task create resource group, storage account and container for storing the terraform state file (remote storage)
         4. Ensure that the build agents have terraform installed or install it by using terraform installer task.
         5. Add terraform init task to instantiate/download the required providers as mentioned in the .tf file.
-        6. Add terraform plan task to check on the changes to be performed on cloud infrastructure.
+        6. Add terraform plan task to check on the changes to be performed on Azure cloud infrastructure (add/delete/updated/replaced).
         7. Add terrafrom apply task to create the infrastructure resources as mentioned in the .tf file.
         8. Use the Deploy WebApp task to create the deployment in Azure using the artifact (.zip) fetched from the build pipeline.
         
@@ -40,7 +40,7 @@
        
        >> Actual Flow:
           
-          Password creation using random_string resource --> Pushing the Password as secret in AKV --> Referencing the Passowrd created by random_string resource in azurerm_windows_virtual_machine resource
+          Password creation using random_string resource --> Pushing the Password as secret in AKV --> Referencing the Password created by random_string resource in azurerm_windows_virtual_machine resource.
           
           Referance :  admin_password      = random_string.webvmpassword.result
                        admin_password      = random_string.appvmpassword.result
