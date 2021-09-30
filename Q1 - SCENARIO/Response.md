@@ -9,7 +9,8 @@
         >> Create multiple projects and add to the solution.
         >> Push the code to a version control, example Azure Repos (Git) in Azure DevOps
         >> Create Build Defination and Select Enable continuous integration option in triggers.
-        >> The above step would run the build defination if any change is made to the main/master branch.
+        >> The above step would run the build defination if any changes are made to the main/master branch.
+                  >>>> For a granular control, you can use Path Filter
         >> In the Publish Test Results task in the Build Defination, select "Fail if there are test failures" to take care of failing the build if any test case gets failed.
         
 ### 3) The deployment of code and artifacts should be automated to Dev environment.
