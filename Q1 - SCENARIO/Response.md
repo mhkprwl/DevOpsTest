@@ -13,7 +13,7 @@
         
 ### 3) The deployment of code and artifacts should be automated to Dev environment.
         
-        >> Create a Realease pipeline and pass the build pipeline that publishes the artifact.
+        >> Create a Realease pipeline and point it to the build pipeline that publishes the artifact.
         >> Create multiple stages as per environment Dev, QA and Prod
         >> For Dev Stage, enable Continuous deployment trigger, which would create a release every time a new build is available.
         
